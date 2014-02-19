@@ -2,6 +2,13 @@
 
 Quickly spit out a template for platforms such as Campaign Monitor and Mailchimp.
 
+
+## Credit
+
+[HTML Email Boilerplate](http://htmlemailboilerplate.com/) for the basic email structure.
+
+[Campaign Monitor](http://www.campaignmonitor.com/) for responsive table structures.
+
 ## Setup
 
 Once you're up and running with [Yeoman](http://yeoman.io/), install the generator:
@@ -10,7 +17,7 @@ Once you're up and running with [Yeoman](http://yeoman.io/), install the generat
 
 Then create a new directory a `cd` into it:
 
-    mkdir my-email-project && cd $_
+    mkdir my-email && cd $_
 
 And call your Yeoman:
 
