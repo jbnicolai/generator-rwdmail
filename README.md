@@ -20,7 +20,9 @@ And call your Yeoman:
 
 Run `grunt` from your project directory to run a local server and develop in real-time.
 
-When you're ready for production, run `grunt build` to compile the template.
+When you're ready for production, run `grunt build` to compile the template into __dist__.
+
+If you're building specifically for [Campaign Monitor](http://www.campaignmonitor.com/), run `grunt cm`, then upload __index.html__ and __assets.zip__.
 
 ## License
 
