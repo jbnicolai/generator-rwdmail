@@ -11,11 +11,11 @@ body {
     font-family: $font-family-base;
 }
 body,
-#backgroundTable {
+#backgroundWrapper {
     background-color: $body-bg;
 }
 
-#contentTable {
+#contentWrapper {
     background-color: $content-bg;
 }
 
@@ -28,8 +28,6 @@ a {
     }
 }
 
-/* Hotmail header color reset
-Bring inline: Yes. */
 #{headings()} {
 	color: $headings-color !important;
 	font-family: $headings-font-family;
@@ -51,3 +49,30 @@ h3 { font-size: $font-size-h3; }
 h4 { font-size: $font-size-h4; }
 h5 { font-size: $font-size-h5; }
 h6 { font-size: $font-size-h6; }
+
+
+
+// Header
+// --------------------------------------------------------
+
+#headerTable {
+
+}
+
+
+
+// Body
+// --------------------------------------------------------
+
+#bodyTable {
+
+}
+
+
+
+// Footer
+// --------------------------------------------------------
+
+#footerTable {
+
+}

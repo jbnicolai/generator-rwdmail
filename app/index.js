@@ -25,11 +25,6 @@ var RwdmailGenerator = yeoman.generators.Base.extend({
         // replace it with a short and sweet description of your generator
         console.log(chalk.magenta('You\'re using the fantastic RWD-Mail generator.'));
 
-        // this.prompt(prompts, function (props) {
-        //   //this.someOption = props.someOption;
-
-        //   done();
-        // }.bind(this));
         done();
     },
 
