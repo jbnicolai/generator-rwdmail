@@ -1,0 +1,38 @@
+{
+  "name": "generator-rwdmail",
+  "version": "0.0.0",
+  "description": "Responsive email template generator for Yeoman",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "XploreNET/generator-rwdmail",
+  "author": {
+    "name": "Xplore - your web agency",
+    "email": "developers@xplore.net",
+    "url": "https://github.com/XploreNet"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "yeoman",
+    "generator",
+    "email",
+    "mail",
+    "template",
+    "rwd",
+    "responsive"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
