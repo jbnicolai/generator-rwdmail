@@ -35,7 +35,7 @@
 	img {
 		display: inline;
 		height: auto;
-		max-width: ($email-width - ($body-padding * 2));
+		max-width: ($email-width / 2) - ($body-padding * 2);
 	}
 }
 
@@ -55,7 +55,7 @@
 
 		img {
 			height: auto !important;
-			max-width: (($email-width / 2) - $body-padding * 2) !important;
+			max-width: $screen-sm !important;
 			width: 100% !important;
 		}
 	}

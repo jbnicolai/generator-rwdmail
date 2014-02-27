@@ -31,7 +31,8 @@ var RwdmailGenerator = yeoman.generators.Base.extend({
             message: 'What layout template would you like?',
             choices: [
                 { name: 'Single column', value: 'one'},
-                { name: 'Two column', value: 'two'}
+                { name: 'Two column', value: 'two'},
+                { name: 'Three column', value: 'three'}
             ]
         }];
 
