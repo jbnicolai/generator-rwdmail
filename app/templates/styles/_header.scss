@@ -28,11 +28,11 @@
 		font-weight: normal;;
 		text-decoration: underline;
 	}
-}
 
-#headerImage {
-	height: auto;
-	max-width: $email-width;
+	img {
+		height: auto;
+		max-width: $email-width;
+	}
 }
 
 

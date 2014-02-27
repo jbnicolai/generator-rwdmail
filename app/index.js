@@ -27,20 +27,27 @@ var RwdmailGenerator = yeoman.generators.Base.extend({
 
         var prompts = [{
             type: 'list',
-            name: 'templateType',
+            name: 'layout',
             message: 'What layout template would you like?',
             choices: [
                 { name: 'Single column', value: 'one'},
                 { name: 'Two column', value: 'two'},
                 { name: 'Three column', value: 'three'}
             ]
+        }, {
+            type: 'list',
+            name: 'platform',
+            message: 'What email platform are you using?',
+            choices: [
+                { name: 'None', value: 'none' },
+                { name: 'Campaign Monitor', value: 'cm' }
+            ]
         }];
 
         // Ask what template they want
         this.prompt(prompts, function (answers) {
-            this.templateType = answers.templateType;
-
-            console.log(chalk.red('You selected ' + this.templateType));
+            this.cm = (answers.platform === 'cm');
+            this.layout = answers.layout;
 
             done();
         }.bind(this));
@@ -48,6 +55,7 @@ var RwdmailGenerator = yeoman.generators.Base.extend({
 
     app: function () {
         this.mkdir('app');
+        this.mkdir('app/images')
 
         this.template('_Gruntfile.js', 'Gruntfile.js');
         this.copy('_package.json', 'package.json');
@@ -55,14 +63,13 @@ var RwdmailGenerator = yeoman.generators.Base.extend({
     },
 
     htmlTemplate: function () {
-        this.copy('layouts/' + this.templateType + 'Column.html', 'app/index.html');
+        this.template('index.html', 'app/index.html');
     },
 
     styles: function () {
         this.mkdir('app/styles');
 
-        this.template('styles/style.scss', 'app/styles/style.scss');
-
+        this.copy('styles/style.scss', 'app/styles/style.scss');
         this.copy('styles/_variables.scss', 'app/styles/_variables.scss');
         this.copy('styles/_reset.scss', 'app/styles/_reset.scss');
         this.copy('styles/_scaffolding.scss', 'app/styles/_scaffolding.scss');
@@ -71,7 +78,7 @@ var RwdmailGenerator = yeoman.generators.Base.extend({
         this.copy('styles/_header.scss', 'app/styles/_header.scss');
         this.copy('styles/_footer.scss', 'app/styles/_footer.scss');
 
-        this.copy('styles/_' + this.templateType + 'Column.scss', 'app/styles/_body.scss');
+        this.copy('styles/_' + this.layout + 'Column.scss', 'app/styles/_body.scss');
     }
 });
 
