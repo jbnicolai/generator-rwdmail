@@ -5,9 +5,7 @@ Quickly spit out a template for platforms such as Campaign Monitor and Mailchimp
 
 ## Credit
 
-[HTML Email Boilerplate](http://htmlemailboilerplate.com/) for the basic email structure.
-
-[Campaign Monitor](http://www.campaignmonitor.com/) for responsive table structures.
+[MailChimp](http://mailchimp.com/) for their [email blueprints](https://github.com/mailchimp/email-blueprints)
 
 ## Setup
 
