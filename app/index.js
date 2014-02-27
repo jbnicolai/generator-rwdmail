@@ -61,6 +61,7 @@ var RwdmailGenerator = yeoman.generators.Base.extend({
 
         this.copy('styles/style.scss', 'app/styles/style.scss');
         this.copy('styles/_variables.scss', 'app/styles/_variables.scss');
+        this.copy('styles/_reset.scss', 'app/styles/_reset.scss');
         this.copy('styles/_scaffolding.scss', 'app/styles/_scaffolding.scss');
         this.copy('styles/_typography.scss', 'app/styles/_typography.scss');
         this.copy('styles/_preheader.scss', 'app/styles/_preheader.scss');
