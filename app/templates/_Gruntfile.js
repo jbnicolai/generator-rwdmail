@@ -23,6 +23,9 @@ module.exports = function (grunt) {
         // ================================================
         watch: {
             compass: {
+                options: {
+                    livereload: '<%%= connect.options.livereload %>'
+                },
                 files: ['<%%= paths.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:serve']
             },

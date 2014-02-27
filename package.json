@@ -1,6 +1,6 @@
 {
   "name": "generator-rwdmail",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Responsive email template generator for Yeoman",
   "license": "MIT",
   "main": "app/index.js",

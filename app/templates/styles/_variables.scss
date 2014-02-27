@@ -7,11 +7,13 @@
 // Colors
 // --------------------------------------------------------
 
+$black:						#000;
 $gray-darker:				lighten(#000, 13.5%);	// #222
 $gray-dark:					lighten(#000, 20%);		// #333
 $gray:						lighten(#000, 33.5%);	// #555
 $gray-light:				lighten(#000, 60%);		// #999
 $gray-lighter:				lighten(#000, 93.5%);	// #eee
+$white:						#fff;
 
 $brand-primary:				#428bca;
 
@@ -35,6 +37,15 @@ $link-color:				$brand-primary;
 // Global text link hover color
 $link-color-hover:			darken($link-color, 15%);
 
+// Width of the email
+$email-width:				600px;
+
+// Padding for the main body content table cell
+$body-padding:				20px;
+
+// Responsive break point
+$screen-sm:					($email-width + ($body-padding * 2));
+
 
 
 // Typography
@@ -44,19 +55,16 @@ $font-family-sans-serif:	"Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:			Georgia, "Times New Roman", Times, serif;
 $font-family-base:			$font-family-sans-serif;
 
+$font-size-smaller:			10px;
 $font-size-base:			14px;
+$font-size-larger:			20px;
 
-$font-size-h1:				floor(($font-size-base * 2.6));
-$font-size-h2:				floor(($font-size-base * 2.15));
-$font-size-h3:				ceil(($font-size-base * 1.7));
-$font-size-h4:				ceil(($font-size-base * 1.25));
-$font-size-h5:				$font-size-base;
-$font-size-h6:				ceil(($font-size-base * 0.85));
+$line-height-base:			150%;
 
 // Headings
 // ------------------------------------
 
-$headings-font-family:		inherit;
-$headings-font-weight:    	500;
-$headings-line-height:    	1.1;
-$headings-color:			inherit;
+$headings-font-family:		$font-family-base;
+$headings-font-weight:		500;
+$headings-line-height:		1;
+$headings-color:			$gray;
