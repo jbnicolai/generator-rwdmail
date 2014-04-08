@@ -1,263 +1,291 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Your Message Subject or Title</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Your Message Subject or Title</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css<% if (mandrill) { %>?__inline=true<% } %>"/>
 </head>
 <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
 <center>
-	<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
-		<tr>
-			<td align="center" valign="top" id="bodyCell">
-				<!-- BEGIN TEMPLATE // -->
-				<table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
-					<tr>
-						<td align="center" valign="top">
-							<!-- BEGIN PREHEADER // -->
-							<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
-								<tr>
-									<td valign="top" class="preheaderContent">
-										Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
-									</td>
-									<% if (cm) { %>
-									<td valign="top" width="180" class="preheaderContent">
-										Email not displaying correctly?<br />
-										<webversion>View it in your browser</webversion>
-									</td>
-									<% } %>
-								</tr>
-							</table>
-							<!-- // END PREHEADER -->
-						</td>
-					</tr>
-					<tr>
-						<td align="center" valign="top">
-							<!-- BEGIN HEADER // -->
-							<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
-								<tr>
-									<td valign="top" class="headerContent">
-										<% if (cm) { %>
-											<img editable width="600" label="Hero Image" />
-										<% } else { %>
-											<img src="http://placehold.it/600x200"/>
-										<% } %>
-									</td>
-								</tr>
-							</table>
-							<!-- // END HEADER -->
-						</td>
-					</tr>
-					<tr>
-						<td align="center" valign="top">
-							<% if (layout === 'one' || layout === 'three') { %>
-								<!-- BEGIN BODY // -->
-								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
-									<tr>
-										<td valign="top" class="bodyContent">
-											<% if (cm) { %>
-												<h1><singleline label="Main Feature Headline">Main Feature Headline</singleline></h1>
-												<multiline label="Main Feature Intro">Introduction to the main feature</multiline>
-											<% } else { %>
-												<h1>Header</h1>
-												<h3>Sub header</h3>
-												Text <a href="#">Link</a>
-											<% } %>
-										</td>
-									</tr>
-								</table>
-								<!-- // END BODY -->
-							<% } %>
+<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+<tr>
+<td align="center" valign="top" id="bodyCell">
+<!-- BEGIN TEMPLATE // -->
+<table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+<tr>
+  <td align="center" valign="top">
+    <!-- BEGIN PREHEADER // -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
+      <tr>
+        <td valign="top" class="preheaderContent">
+          Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some
+          email clients.
+        </td>
+        <% if (cm) { %>
+        <td valign="top" width="180" class="preheaderContent">
+          Email not displaying correctly?<br/>
+          <webversion>View it in your browser</webversion>
+        </td>
+        <% } %>
+      </tr>
+    </table>
+    <!-- // END PREHEADER -->
+  </td>
+</tr>
+<tr>
+  <td align="center" valign="top">
+    <!-- BEGIN HEADER // -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+      <tr>
+        <td valign="top" class="headerContent">
+          <% if (cm) { %>
+          <img editable width="600" label="Hero Image"/>
+          <% } else { %>
+          <img src="http://placehold.it/600x200"/>
+          <% } %>
+        </td>
+      </tr>
+    </table>
+    <!-- // END HEADER -->
+  </td>
+</tr>
+<tr>
+  <td align="center" valign="top">
+    <% if (layout === 'one' || layout === 'three') { %>
+    <!-- BEGIN BODY // -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+      <tr>
+        <td valign="top" class="bodyContent">
+          <% if (cm) { %>
+          <h1>
+            <singleline label="Main Feature Headline">Main Feature Headline</singleline>
+          </h1>
+          <multiline label="Main Feature Intro">Introduction to the main feature</multiline>
+          <% } else { %>
+          <h1>Header</h1>
 
-							<% if (layout === 'two') { %>
-								<!-- BEGIN COLUMNS // -->
-								<% if (cm) { %><repeater><% } %>
-								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
-									<tr>
-										<td align="center" valign="top" class="templateColumnContainer">
-											<table border="0" cellpadding="20" cellspacing="0" width="100%">
-												<tr>
-													<td class="leftColumnContent">
-														<% if (cm) { %>
-															<img editable label="Left Image" width="260"/>
-														<% } else { %>
-															<img src="http://placehold.it/260x120">
-														<% } %>
-													</td>
-												</tr>
-												<tr>
-													<td valign="top" class="leftColumnContent">
-														<% if (cm) { %>
-															<h3><singleline label="Left Title">Left title</singleline></h3>
-															<multiline label="Left Content">Left content</multiline>
-														<% } else { %>
-															<h3>Left Column</h3>
-															Text <a href="#">Link</a>
-														<% } %>
-													</td>
-												</tr>
-											</table>
-										</td>
-										<td align="center" valign="top" class="templateColumnContainer">
-											<table border="0" cellpadding="20" cellspacing="0" width="100%">
-												<tr>
-													<td class="rightColumnContent">
-														<% if (cm) { %>
-															<img editable label="Right Image" width="260"/>
-														<% } else { %>
-															<img src="http://placehold.it/260x120">
-														<% } %>
-													</td>
-												</tr>
-												<tr>
-													<td valign="top" class="rightColumnContent">
-														<% if (cm) { %>
-															<h3><singleline label="Right Title">Right title</singleline></h3>
-															<multiline label="Right Content">Right content</multiline>
-														<% } else { %>
-															<h3>Right Column</h3>
-															Text <a href="#">Link</a>
-														<% } %>
-													</td>
-												</tr>
-											</table>
-										</td>
-									</tr>
-								</table>
-								<% if (cm) { %></repeater><% } %>
-								<!-- // END COLUMNS -->
-							<% } %>
+          <h3>Sub header</h3>
+          Text
+          <a href="#">Link</a>
+          <% } %>
+        </td>
+      </tr>
+    </table>
+    <!-- // END BODY -->
+    <% } %>
 
-							<% if (layout === 'three') { %>
-							<!-- BEGIN COLUMNS // -->
-							<% if (cm) { %><repeater><% } %>
-							<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
-								<tr>
-									<td align="center" valign="top" class="templateColumnContainer">
-										<table border="0" cellpadding="20" cellspacing="0" width="100%">
-											<tr>
-												<td class="leftColumnContent">
-													<% if (cm) { %>
-														<img editable label="Left Image" width="160"/>
-													<% } else { %>
-														<img src="http://placehold.it/160x120">
-													<% } %>
-												</td>
-											</tr>
-											<tr>
-												<td valign="top" class="leftColumnContent">
-													<% if (cm) { %>
-														<h3><singleline label="Left Title">Left title</singleline></h3>
-														<multiline label="Left Content">Left content</multiline>
-													<% } else { %>
-														<h3>Left Column</h3>
-														Text <a href="#">Link</a>
-													<% } %>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td align="center" valign="top" class="templateColumnContainer">
-										<table border="0" cellpadding="20" cellspacing="0" width="100%">
-											<tr>
-												<td class="centerColumnContent">
-													<% if (cm) { %>
-														<img editable label="Center Image" width="160"/>
-													<% } else { %>
-														<img src="http://placehold.it/160x120">
-													<% } %>
-												</td>
-											</tr>
-											<tr>
-												<td valign="top" class="centerColumnContent">
-													<% if (cm) { %>
-														<h3><singleline label="Center Title">Center title</singleline></h3>
-														<multiline label="Center Content">Center content</multiline>
-													<% } else { %>
-														<h3>Center Column</h3>
-														Text <a href="#">Link</a>
-													<% } %>
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td align="center" valign="top" class="templateColumnContainer">
-										<table border="0" cellpadding="20" cellspacing="0" width="100%">
-											<tr>
-												<td class="rightColumnContent">
-													<% if (cm) { %>
-													<img editable label="Right Image" width="160"/>
-													<% } else { %>
-													<img src="http://placehold.it/160x120">
-													<% } %>
-												</td>
-											</tr>
-											<tr>
-												<td valign="top" class="rightColumnContent">
-													<% if (cm) { %>
-														<h3><singleline label="Right Title">Right title</singleline></h3>
-														<multiline label="Right Content">Right content</multiline>
-													<% } else { %>
-														<h3>Right Column</h3>
-														Text <a href="#">Link</a>
-													<% } %>
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</table>
-							<% if (cm) { %></repeater><% } %>
-							<!-- // END COLUMNS -->
-							<% } %>
-						</td>
-					</tr>
-					<tr>
-						<td align="center" valign="top">
-							<!-- BEGIN FOOTER // -->
-							<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
-								<tr>
-									<td valign="top" class="footerContent">
-										<% if (cm) { %>
-											<tweet></tweet>
-											&nbsp;
-											&nbsp;
-											&nbsp;
-											<fblike></fblike>
-										<% } else { %>
-											<a href="#">Link</a>
-										<% } %>
-									</td>
-								</tr>
-								<tr>
-									<td valign="top" class="footerContent" style="padding-top: 0">
-										<% if (cm) { %>
-											Copyright &copy; <currentyear> CLIENT NAME. All rights reserved.
-										<% } else { %>
-											Copyright &copy; YEAR CLIENT NAME. All rights reserved.
-										<% } %>
-									</td>
-								</tr>
-								<% if (cm) { %>
-								<tr>
-									<td valign="top" class="footerContent" style="padding-top: 0">
-										<unsubscribe>unsubscribe from this list</unsubscribe>
-										&nbsp;
-										&nbsp;
-										&nbsp;
-										<preferences>update subscription preferences</preferences>
-									</td>
-								</tr>
-								<% } %>
-							</table>
-							<!-- // END FOOTER -->
-						</td>
-					</tr>
-				</table>
-				<!-- // END TEMPLATE -->
-			</td>
-		</tr>
-	</table>
+    <% if (layout === 'two') { %>
+    <!-- BEGIN COLUMNS // -->
+    <% if (cm) { %>
+    <repeater><% } %>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
+        <tr>
+          <td align="center" valign="top" class="templateColumnContainer">
+            <table border="0" cellpadding="20" cellspacing="0" width="100%">
+              <tr>
+                <td class="leftColumnContent">
+                  <% if (cm) { %>
+                  <img editable label="Left Image" width="260"/>
+                  <% } else { %>
+                  <img src="http://placehold.it/260x120">
+                  <% } %>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" class="leftColumnContent">
+                  <% if (cm) { %>
+                  <h3>
+                    <singleline label="Left Title">Left title</singleline>
+                  </h3>
+                  <multiline label="Left Content">Left content</multiline>
+                  <% } else { %>
+                  <h3>Left Column</h3>
+                  Text
+                  <a href="#">Link</a>
+                  <% } %>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td align="center" valign="top" class="templateColumnContainer">
+            <table border="0" cellpadding="20" cellspacing="0" width="100%">
+              <tr>
+                <td class="rightColumnContent">
+                  <% if (cm) { %>
+                  <img editable label="Right Image" width="260"/>
+                  <% } else { %>
+                  <img src="http://placehold.it/260x120">
+                  <% } %>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" class="rightColumnContent">
+                  <% if (cm) { %>
+                  <h3>
+                    <singleline label="Right Title">Right title</singleline>
+                  </h3>
+                  <multiline label="Right Content">Right content</multiline>
+                  <% } else { %>
+                  <h3>Right Column</h3>
+                  Text
+                  <a href="#">Link</a>
+                  <% } %>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <% if (cm) { %>
+    </repeater>
+    <% } %>
+    <!-- // END COLUMNS -->
+    <% } %>
+
+    <% if (layout === 'three') { %>
+    <!-- BEGIN COLUMNS // -->
+    <% if (cm) { %>
+    <repeater><% } %>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
+        <tr>
+          <td align="center" valign="top" class="templateColumnContainer">
+            <table border="0" cellpadding="20" cellspacing="0" width="100%">
+              <tr>
+                <td class="leftColumnContent">
+                  <% if (cm) { %>
+                  <img editable label="Left Image" width="160"/>
+                  <% } else { %>
+                  <img src="http://placehold.it/160x120">
+                  <% } %>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" class="leftColumnContent">
+                  <% if (cm) { %>
+                  <h3>
+                    <singleline label="Left Title">Left title</singleline>
+                  </h3>
+                  <multiline label="Left Content">Left content</multiline>
+                  <% } else { %>
+                  <h3>Left Column</h3>
+                  Text
+                  <a href="#">Link</a>
+                  <% } %>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td align="center" valign="top" class="templateColumnContainer">
+            <table border="0" cellpadding="20" cellspacing="0" width="100%">
+              <tr>
+                <td class="centerColumnContent">
+                  <% if (cm) { %>
+                  <img editable label="Center Image" width="160"/>
+                  <% } else { %>
+                  <img src="http://placehold.it/160x120">
+                  <% } %>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" class="centerColumnContent">
+                  <% if (cm) { %>
+                  <h3>
+                    <singleline label="Center Title">Center title</singleline>
+                  </h3>
+                  <multiline label="Center Content">Center content</multiline>
+                  <% } else { %>
+                  <h3>Center Column</h3>
+                  Text
+                  <a href="#">Link</a>
+                  <% } %>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td align="center" valign="top" class="templateColumnContainer">
+            <table border="0" cellpadding="20" cellspacing="0" width="100%">
+              <tr>
+                <td class="rightColumnContent">
+                  <% if (cm) { %>
+                  <img editable label="Right Image" width="160"/>
+                  <% } else { %>
+                  <img src="http://placehold.it/160x120">
+                  <% } %>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" class="rightColumnContent">
+                  <% if (cm) { %>
+                  <h3>
+                    <singleline label="Right Title">Right title</singleline>
+                  </h3>
+                  <multiline label="Right Content">Right content</multiline>
+                  <% } else { %>
+                  <h3>Right Column</h3>
+                  Text
+                  <a href="#">Link</a>
+                  <% } %>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <% if (cm) { %>
+    </repeater>
+    <% } %>
+    <!-- // END COLUMNS -->
+    <% } %>
+  </td>
+</tr>
+<tr>
+  <td align="center" valign="top">
+    <!-- BEGIN FOOTER // -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+      <tr>
+        <td valign="top" class="footerContent">
+          <% if (cm) { %>
+          <tweet></tweet>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <fblike></fblike>
+          <% } else { %>
+          <a href="#">Link</a>
+          <% } %>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" class="footerContent" style="padding-top: 0">
+          <% if (cm) { %>
+            Copyright &copy; <currentyear> CLIENT NAME. All rights reserved.
+          <% } else if (mandrill || mc) { %>
+            Copyright &copy; *|DATE:Y|* CLIENT NAME. All rights reserved.
+          <% } else { %>
+            Copyright &copy; YEAR CLIENT NAME. All rights reserved.
+          <% } %>
+        </td>
+      </tr>
+      <% if (cm) { %>
+      <tr>
+        <td valign="top" class="footerContent" style="padding-top: 0">
+          <unsubscribe>unsubscribe from this list</unsubscribe>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <preferences>update subscription preferences</preferences>
+        </td>
+      </tr>
+      <% } %>
+    </table>
+    <!-- // END FOOTER -->
+  </td>
+</tr>
+</table>
+<!-- // END TEMPLATE -->
+</td>
+</tr>
+</table>
 </center>
 </body>
 </html>

@@ -3,60 +3,59 @@
 // ========================================================
 
 .templateColumnContainer {
-	width: ($email-width / 2) - ($body-padding * 2);
-	padding-top: $body-padding;
+  width: ($email-width / 2) - ($body-padding * 2);
+  padding-top: $body-padding;
 }
 
 #templateColumns {
-	background-color: $white;
+  background-color: $white;
 }
 
 .leftColumnContent,
 .rightColumnContent {
-	padding-top: 0;
-	padding-right: $body-padding;
-	padding-bottom: $body-padding;
-	padding-left: $body-padding;
+  padding-top: 0;
+  padding-right: $body-padding;
+  padding-bottom: $body-padding;
+  padding-left: $body-padding;
 
-	color: $text-color;
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	line-height: $line-height-base;
-	text-align: left;
+  color: $text-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  text-align: left;
 
-	a:link,
-	a:visited,
-	a .yshortcuts {
-		color: $link-color;
-		font-weight: normal;
-		text-decoration: underline;
-	}
+  a:link,
+  a:visited,
+  a .yshortcuts {
+    color: $link-color;
+    font-weight: normal;
+    text-decoration: underline;
+  }
 
-	img {
-		display: inline;
-		height: auto;
-		max-width: ($email-width / 2) - ($body-padding * 2);
-	}
+  img {
+    display: inline;
+    height: auto;
+    max-width: ($email-width / 2) - ($body-padding * 2);
+  }
 }
-
 
 // Responsive
 // --------------------------------------------------------
 
 @media only screen and (max-width: $screen-sm) {
-	.templateColumnContainer {
-		display: block !important;
-		width: 100% !important;
-	}
+  .templateColumnContainer {
+    display: block !important;
+    width: 100% !important;
+  }
 
-	.leftColumnContent,
-	.rightColumnContent {
-		line-height: 125% !important;
+  .leftColumnContent,
+  .rightColumnContent {
+    line-height: 125% !important;
 
-		img {
-			height: auto !important;
-			max-width: $screen-sm !important;
-			width: 100% !important;
-		}
-	}
+    img {
+      height: auto !important;
+      max-width: $screen-sm !important;
+      width: 100% !important;
+    }
+  }
 }
