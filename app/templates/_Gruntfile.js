@@ -148,8 +148,7 @@ module.exports = function (grunt) {
       build: {
         expand: true,
         cwd: '<%%= paths.dist %>',
-        src: '**/*.html',
-        dest: '<%%= paths.dist %>'
+        src: '**/*.html'
       }
     },
 
